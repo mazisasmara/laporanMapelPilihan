@@ -19,7 +19,7 @@ if (!$koneksi){
 
 ## Hasil
 
-![[Basis data/Mei/assets/koneksi berhasil.png]] 
+![koneksi berhasil](assets/koneksi%20berhasil.png) 
 
 ## Analisis
 - `<?php` Ini adalah tag pembuka untuk menggunakan code PHP.
@@ -39,7 +39,7 @@ if (!$koneksi){
 File ini berfungsi untuk menghubungkan proyek website kita dengan database mysql. Dengan menggunakan fungsi dari PHP yaitu `mysqli_connect()`, kita telah mengoneksikan proyek kita dengan database yang di inginkan.
 
 ## Tampil Data Sederhana
-![[Basis data/Mei/assets/hasil.png]]
+![hasil](assets/hasil.png)
 
 
 # Tampil Pelanggan
@@ -112,7 +112,7 @@ Di dalam tabel terdapat:
     
 
 Juda ada tombol **Tambah Pelanggan** untuk menambahkan data baru.
-![[tampil.png]]
+![tampil](assets/tampil.png)
 
 ## Analisis
 
@@ -216,7 +216,7 @@ Program akan menampilkan form tambah pelanggan yang berisi:
     
 
 Lalu data yang diisi pengguna akan dikirim ke file `tambah.php`.
-![[form tambah.png]]
+![form tambah](assets/form%20tambah.png)
 
 ## Analisis
 
@@ -296,7 +296,7 @@ if (isset($_POST['simpan'])){
 
 Program akan menyimpan data pelanggan yang diinput dari form ke dalam database.  
 Setelah data berhasil disimpan, halaman akan otomatis berpindah ke `index.php`.
-![[tampilWithArjun.png]]
+![tampilWithArjun](assets/tampilWithArjun.png)
 
 
 ## Analisis
@@ -385,7 +385,7 @@ $data = mysqli_fetch_assoc($result);
 ```
 ### Hasil
 Program akan menampilkan form edit yang sudah terisi otomatis dengan data lama pelanggan berdasarkan ID yang dipilih. Pengguna dapat mengubah data tersebut, lalu menekan tombol "Simpan" untuk memperbarui data di database.
-![[form edit before.png]]
+![form edit before](assets/form%20edit%20before.png)
 ### Analisis
  * `$id = $_GET['id'];` Mengambil ID pelanggan yang dikirim melalui parameter URL (method GET) dari halaman daftar pelanggan.
  * `SELECT * FROM pelanggan where PelangganID='$id'`: Query SQL untuk mencari data pelanggan spesifik yang memiliki ID tersebut.
@@ -435,8 +435,8 @@ if (isset($_POST['update'])) {
 ```
 ### Hasil
 Program akan memproses pembaruan data ke dalam database. Jika berhasil, sistem akan menampilkan pesan peringatan (alert) bahwa data berhasil diupdate, kemudian halaman akan dialihkan kembali ke index.php.
-![[alert.png]]
-![[tampilWithArjun.png]]
+![alert](assets/alert.png)
+![tampilWithArjun](assets/tampilWithArjun.png)
 ### Analisis
  * `if (isset($_POST['update']))`: Memastikan bahwa data dikirimkan melalui tombol submit yang benar (method POST).
  * `$id = $_POST['PelangganId'];`: Mengambil data yang dikirim dari form, termasuk ID pelanggan yang disembunyikan sebelumnya.
@@ -466,7 +466,7 @@ if (isset($_GET['id'])) {
 ```
 ### Hasil
 Saat link "Hapus" pada halaman daftar pelanggan diklik, program akan menghapus baris data tersebut dari database. Setelah itu, pengguna akan langsung diarahkan kembali ke halaman utama (index.php) dan data tersebut tidak lagi terlihat di tabel. Sebagai contoh, saya akan menghapus pengguna "Aik".
-![[tampilWithoutAik.png]]
+![tampilWithoutAik](assets/tampilWithoutAik.png)
 ### Analisis
  * `if (isset($_GET['id']))`: Mengecek apakah ada parameter ID yang dikirim melalui URL.
  * `$id = $_GET['id'];`: Mengambil ID data yang akan dihapus.
